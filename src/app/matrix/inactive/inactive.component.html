@@ -1,0 +1,26 @@
+
+<div class="container">
+    <h2>Inactive Recruiter Listings</h2>        
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>State</th>
+          <th>Active</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let it of inactive; let i = index;">
+          <td>{{ it.first }}</td>
+          <td>{{ it.last }}</td>
+          <td>{{ it.phone }}</td>
+          <td>{{ it.email }}</td>
+          <td>{{ it.state }}</td>
+          <td>{{ it.active }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

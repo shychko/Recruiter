@@ -1,0 +1,32 @@
+
+<div class="container">
+    <h2>Active Recruiter Listings</h2>        
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>State</th>
+          <th>Active</th>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rec of recruiters; let i = index;">
+          <td>{{ rec.first }}</td>
+          <td>{{ rec.last }}</td>
+          <td>{{ rec.phone }}</td>
+          <td>{{ rec.email }}</td>
+          <td>{{ rec.state }}</td>
+          <td>{{ rec.active }}</td>
+          <td>
+            <form (ngSubmit)="deleteRecruiter(rec.id)" type="submit" >
+              <button id="add" name="delete" class="btn btn-primary">Delete</button>
+            </form>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
